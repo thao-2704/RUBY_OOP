@@ -10,13 +10,13 @@ class Newspaper < Document
   
   def create()
     super()
-    print "Day Issue : "
+    print "Ngay phat hanh : "
     self.dayIssue = gets.chop()
   end
 
   def display()
-    print "Newspaper : "
+    print "BAO : "
     super.display()
-    puts "\tDay Issue : #{self.dayIssue}"
+    puts "\tNgay phat hanh : #{self.dayIssue}"
   end
 end

@@ -5,11 +5,11 @@ require './Newspaper'
 
 def initBasicData(docManager)
   book = Book.new()
-  book.initData('1', 'ruby', '3', 'learing ruby tutorial', '120')
+  book.initData('1', 'Sach RuBy', '4', 'Hoc Ruby nhanh chong', '130')
   journal = Journal.new()
-  journal.initData('11', 'journal', '31', '32', '12')
+  journal.initData('2', 'Tap chi', '31', '32', '12')
   newspaper = Newspaper.new()
-  newspaper.initData('3', 'newspaper', '10', '12/02/2021')
+  newspaper.initData('3', 'Bao An ninh', '10', '12/10/2022')
   docManager.addDocument(book)
   docManager.addDocument(journal)
   docManager.addDocument(newspaper)
@@ -18,25 +18,28 @@ end
 def  addDocumentMethod(docManager)
   choose = 0
   loop do
-    puts "1. Book!"
-    puts "2. Newspaper!"
-    puts "3. Journal!"
-    puts "4. Go Back!"
-    print "Enter your choose: "
+    puts "1. SACH!"
+    puts "2. BAO!"
+    puts "3. TAP CHI!"
+    puts "4. TRO VE!"
+    print "Nhap lua chon cua ban: "
     choose = gets.chop()
     case choose
     when "1"
-      puts "Add new book"
+    puts("==========================================")
+      puts "THEM MOI SACH"
       doc = Book.new()
       doc.create()
       docManager.addDocument(doc)
     when "2"
-      puts "Add new Newspaper"
+    puts("==========================================")
+      puts "THEM MOI BAO"
       doc = Newspaper.new()
       doc.create()
       docManager.addDocument(doc)
     when "3"
-      puts "Add new Journal"
+    puts("==========================================")
+      puts "THEM MOI TAP CHI"
       doc = Journal.new()
       doc.create()
       docManager.addDocument(doc)
@@ -47,40 +50,42 @@ def  addDocumentMethod(docManager)
   end
 end
 def removeDoc(docManager)
-  print "Enter your document id: "
+  puts("==========================================")
+  print "Nhap ID muon xoa: "
   id = gets.chop()
   docManager.removeDocument(id)
 end
 docManager = DocumentManager.new()
 initBasicData(docManager)
 loop do
-  puts "1. Add a new document(book, newspaper, journal)!"
-  puts "2. Remove document with id!"
-  puts "3. Show information document!"
-  puts "4. Seach document with type: Book, Newspaper, Journal!"
-  puts "5. Exit!"
-  puts "6. Clear Terminal!"
-  print "Enter your choose: "
+  puts "1.Them tai lieu(Sach, Bao, Tap chi)!"
+  puts "2. Xoa Tai lieu bang ID!"
+  puts "3. Hien thi thong tin tai lieu!"
+  puts "4. Tim tai lieu theo loai: Sach, Bao, Tap chi!"
+  puts "5. Thoat!"
+  puts "6. Lam moi!"
+  print "Nhap lua chon cua ban: "
   choose = gets.chop()
   case choose
   when "1"
-    puts "Add a new document!"
+    puts("==========================================")
+    puts "THEM TAI LIEU!"
     addDocumentMethod(docManager)
   when "2"
-    puts "Remove document with id!"
+    puts("==========================================")
+    puts "XOA TAI LIEU BANG ID!"
     removeDoc(docManager)
   when "3"
     docManager.display()
   when "4"
+    puts("==========================================")
     puts "Seach document with type: Book, Newspaper, Journal!"
-    puts "1. Search By Book"
-    puts "2. Search By Newspaper"
-    puts "3. Search By Journal"
-    # puts "4. All Type Document"
-
-    puts "Enter your type: "
+    puts "1. Tim voi Sach"
+    puts "2. Tim voi Bao"
+    puts "3. Tim voi Tap chi"
+    puts "Nhap lua chon: "
     typeDoc = gets.chop()
-    print "Enter your id: "
+    print "Nhap ID: "
     idSearch = gets.chop()
     case typeDoc
     when "1"
@@ -97,6 +102,6 @@ loop do
   when "6"
     system ("cls")
   else 
-    puts "Not Found Your Choose!"
+    puts "Khong tim thay lua chon cua ban!"
   end
 end

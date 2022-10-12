@@ -12,10 +12,10 @@ class AGrade < Student
   # GradeA =  "Math -- Physics -- Chemistry"
   def initialize(id, name, address, priority)
     super(id, name, address, priority)
-    self.GradeA =  "Math -- Physics -- Chemistry" 
+    self.GradeA =  "Toán || Lý || Hoá" 
   end
   def display()
     super()
-    puts "A Class: #{self.GradeA}"
+    puts "KHOI A: #{self.GradeA}"
   end
 end

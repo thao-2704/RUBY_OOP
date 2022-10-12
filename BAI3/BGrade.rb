@@ -3,10 +3,10 @@ class BGrade < Student
   attr_accessor :GradeB
   def initialize(id, name, address, priority)
     super(id, name, address, priority)
-    self.GradeB = "Math -- Chemistry -- Biological"
+    self.GradeB = "Toan -- Hoa -- Sinh"
   end
   def display()
     super()
-    puts "B Class: #{self.GradeB}"
+    puts "KHOI B: #{self.GradeB}"
   end
 end

@@ -12,15 +12,15 @@ class Book < Document
   
   def create()
     super()
-    print "Author: "
+    print "Tac gia: "
     self.author = gets.chop()
-    print "page Number: "
+    print "So trang: "
     self.pageNumber = gets.chop()
   end
   
   def display()
-    print "Book : "
+    print "SACH : "
     super.display()
-    puts "\tAuthor : #{self.author} -- pageNumber : #{self.pageNumber}"
+    puts "\tTac gia : #{self.author} || So trang : #{self.pageNumber}"
   end
 end

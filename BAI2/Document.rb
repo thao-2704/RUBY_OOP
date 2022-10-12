@@ -8,15 +8,15 @@ class Document
     end
   
     def create()
-      print "id: "
+      print "ID: "
       self.id = gets.chop()
-      print "nxb: "
+      print "Nha xuat ban: "
       self.nxb = gets.chop()
-      print "number: "
+      print "So: "
       self.number = gets.chop()
     end
     
     def display()
-      puts "Id : #{self.id} -- nxb: #{self.nxb} -- number: #{self.number}"
+      puts "Id : #{self.id} || Nha xuat ban: #{self.nxb} || So: #{self.number}"
     end
   end

@@ -9,14 +9,15 @@ class Journal < Document
 
   def create()
     super()
-    print "Issue Number"
+    print "So phat hanh"
     self.issueNumber = gets.chop()
-    print "Month Number"
+    print "Thang phat hanh"
     self.monthIssue = gets.chop()
   end
   def display()
-    print "Journal : "
+    puts("==========================================")
+    print "TAP CHI : "
     super.display()
-    puts "\tIssue Number : #{self.issueNumber} -- Month Issue : #{self.monthIssue}"
+    puts "\tSo phat hanh : #{self.issueNumber} || Thang phat hanh : #{self.monthIssue}"
   end
 end

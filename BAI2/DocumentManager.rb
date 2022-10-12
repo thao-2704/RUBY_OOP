@@ -21,7 +21,7 @@ class DocumentManager
       end
     end
     def display()
-      puts "\n================= Document List ================="
+      puts "\n================= DANH SACH TAI LIEU ================="
       DocumentList.each do |document| document.display()
       end
       puts "\n====================== End ======================"
